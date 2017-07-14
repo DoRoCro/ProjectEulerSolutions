@@ -1,4 +1,4 @@
-package com.drc;
+package com.drc.euler_P1;
 
 /**
  * Created by douglas on 14/07/17.

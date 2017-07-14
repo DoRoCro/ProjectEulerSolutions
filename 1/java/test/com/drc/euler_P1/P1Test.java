@@ -1,4 +1,4 @@
-package com.drc;
+package com.drc.euler_P1;
 
 import org.junit.Before;
 import org.junit.Test;
