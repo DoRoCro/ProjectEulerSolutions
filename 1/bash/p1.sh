@@ -7,4 +7,4 @@ do
         sum=$(($sum+$i))
     fi
 done
-echo $sum
+echo "The answer is: $sum"
