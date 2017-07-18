@@ -18,4 +18,18 @@ public class P1 {
         }
         return sum;
     }
+
+    public int result(int mult1, int mult2) {
+//    use some overloading to make tests similar
+        int sum1 = sumOfMultiples(mult1);
+        int sum2 = sumOfMultiples(mult2);
+        int doubleCounts = sumOfMultiples((mult1 * mult2));
+        return sum1 + sum2 - doubleCounts;
+    }
+    private int sumOfMultiples( int multiple) {
+        // need to cope with case where multiple is exact divisor of number, where we want to be < number
+        int maxMult = (this.number - 1 ) - (( this.number - 1 ) % multiple);
+        return ( maxMult + multiple ) * ( maxMult / multiple ) / 2;
+    }
+
 }

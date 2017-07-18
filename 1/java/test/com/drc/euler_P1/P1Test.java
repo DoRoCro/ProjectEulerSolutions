@@ -20,9 +20,20 @@ public class P1Test {
     }
 
     @Test
+    public void result35For10Gives23() throws Exception {
+        P1 myP1 = new P1(10);
+        assertEquals(23, myP1.result(3,5));
+    }
+
+    @Test
     public void resultFor1000() throws Exception {
         P1 myP1 = new P1(1000);
         assertEquals(233168, myP1.result());
+    }
+    @Test
+    public void result35For1000() throws Exception {
+        P1 myP1 = new P1(1000);
+        assertEquals(233168, myP1.result(3,5));
     }
 
 }
