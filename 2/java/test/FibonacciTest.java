@@ -37,6 +37,10 @@ public class FibonacciTest {
         assertEquals( 44, myFib.sumOfEvens(10));
     }
     @Test
+    public void testSumOfEvenTermsUpTo89() {
+        assertEquals( 44, myFib.sumOfEvensNotExceedingValue(89));
+    }
+    @Test
     public void testSumOfEvenTermsUpTo200thTermFor1And2SeedsIsLarge() {
         assertEquals( 8661519129473970634l, myFib.sumOfEvens(200));
     }

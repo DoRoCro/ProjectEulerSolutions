@@ -36,4 +36,21 @@ public class Fibonacci {
         }
         return sum;
     }
+
+    public long sumOfEvensNotExceedingValue(Integer termValue) {
+        // populate arraylist out to required term
+        int termIterator = 3;
+
+        while (this.term(termIterator) < termValue) {
+            termIterator++;
+        }
+        termIterator--; //1 step back after overshooting
+        long sum = 0;
+        for (int i = 0; i < termIterator; i++){
+            if ((Long)this.seriesValues.get(i) % 2 == 0) {
+                sum += (Long) this.seriesValues.get(i);
+            }
+        }
+        return sum;
+    }
 }
