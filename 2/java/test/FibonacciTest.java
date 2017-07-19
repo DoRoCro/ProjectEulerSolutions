@@ -26,4 +26,9 @@ public class FibonacciTest {
         assertEquals((Integer) 5, myFib.term(4));
     }
 
+    @Test
+    public void test10thTermFor1And2SeedsIs89 () {
+        assertEquals((Integer) 89, myFib.term(10));
+    }
+
 }
