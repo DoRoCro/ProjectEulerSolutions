@@ -39,5 +39,4 @@ module.exports = p3
 
 // const answer = p3(13195)
 const answer = p3(600851475143)
-console.log('Prime Factors are:' + answer)
-console.log('The answer is: ' + answer[answer.length - 1])
+console.log('The answer is: ' + answer)
