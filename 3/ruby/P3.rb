@@ -7,7 +7,7 @@ class MyPrime
 
     # find all potential factors up to number/2
     primes = []
-    Prime.each(number/2) do |prime|
+    Prime.each(Math::sqrt(number)) do |prime|
       primes.push(prime)
     end
     # filter out all non-factors
@@ -16,6 +16,6 @@ class MyPrime
     return primes.last
   end
 end
+answer = MyPrime.largest_factor 13195
 answer = MyPrime.largest_factor 600851475143
-# answer = MyPrime.largest_factor 13195
 puts "The answer is: #{answer}"
