@@ -6,8 +6,6 @@ var p3 = function (number) {
   if (number > 1) {
     minFactors = minFactors.concat(leastFactor(number))
   }
-  console.log('called')
-  console.log(minFactors)
   return minFactors.concat(p3(number / minFactors[minFactors.length - 1]))
 }
 
@@ -32,6 +30,10 @@ function leastFactor (n) {
   }
   return n
 }
+module.exports = p3
+
 // const answer = p3(13195)
 const answer = p3(600851475143)
-console.log('the answer is: ' + answer[answer.length - 2])
+answer.pop()
+console.log('Prime Factors are:' + answer)
+console.log('The answer is: ' + answer[answer.length - 1])

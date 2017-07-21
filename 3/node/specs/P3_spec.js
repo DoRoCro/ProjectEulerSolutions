@@ -7,7 +7,7 @@ describe('p3', function () {
     // p1 = new p1()
   })
   it('should calculate 29 for 13195', function () {
-    assert.strictEqual( p3(13195), 29)
+    assert.strictEqual(p3(13195), 29)
   })
   it('should calculate 5 for 15', function () {
     assert.strictEqual(p3(15), 5)
