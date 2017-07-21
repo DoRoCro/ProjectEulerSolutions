@@ -1,12 +1,12 @@
-var p3 = function (number) {
+var factor = function (number) {
   // 'borrowed' from http://www.javascripter.net/math/primes/factorization.htm
   if (isNaN(number) || !isFinite(number) || number % 1 !== 0 || number === 0) return number
-  if (number < 0) return '-' + p3(-number)
+  if (number < 0) return '-' + factor(-number)
   var minFactors = []
   if (number > 1) {
     minFactors = minFactors.concat(leastFactor(number))
   }
-  return minFactors.concat(p3(number / minFactors[minFactors.length - 1]))
+  return minFactors.concat(factor(number / minFactors[minFactors.length - 1]))
 }
 
 // find the least factor in n by trial division
@@ -30,10 +30,14 @@ function leastFactor (n) {
   }
   return n
 }
+var p3 = function (number) {
+  var factors = factor(number)
+  factors.pop()
+  return factors.pop()
+}
 module.exports = p3
 
 // const answer = p3(13195)
 const answer = p3(600851475143)
-answer.pop()
 console.log('Prime Factors are:' + answer)
 console.log('The answer is: ' + answer[answer.length - 1])
