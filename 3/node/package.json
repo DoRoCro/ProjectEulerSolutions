@@ -1,0 +1,21 @@
+{
+  "name": "euler_p3",
+  "version": "1.0.0",
+  "description": "Project euler Proble 3",
+  "main": "P3.js",
+  "dependencies": {},
+  "devDependencies": {},
+  "scripts": {
+    "test": "mocha specs/*"
+  },
+  "author": "DRC",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DoRoCro/ProjectEulerSolutions.git"
+  },
+  "bugs": {
+    "url": "https://github.com/DoRoCro/ProjectEulerSolutions/issues"
+  },
+  "homepage": "https://github.com/DoRoCro/ProjectEulerSolutions#readme"
+}
