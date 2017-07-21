@@ -5,7 +5,7 @@ class MyPrime
     # stop if prime (feels like cheating...)
     return number if Prime::prime? number
 
-    # find all potential factors up to number/2
+    # find all potential factors up to sqrt(number)
     primes = []
     Prime.each(Math::sqrt(number)) do |prime|
       primes.push(prime)
@@ -16,6 +16,6 @@ class MyPrime
     return primes.last
   end
 end
-answer = MyPrime.largest_factor 13195
+
 answer = MyPrime.largest_factor 600851475143
 puts "The answer is: #{answer}"
