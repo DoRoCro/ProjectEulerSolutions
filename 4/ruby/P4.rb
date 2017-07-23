@@ -18,6 +18,7 @@ class Palindrome
   end
 end
 
+# Brute force (ish) approach -
 # start from largest product, work down, find all, find max
 palindromes = Hash.new
 (900..999).to_a.each do |i|
