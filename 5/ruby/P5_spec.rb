@@ -16,9 +16,8 @@ class P5Spec < Minitest::Test
   end
 
   def test_2520_evenly_divisible_10
-    skip
     tester10 = P5.new 10
-    assert_equal(true, tester.is_divisible )
+    assert_equal(true, tester10.divisible?(2520) )
   end
 
 end
