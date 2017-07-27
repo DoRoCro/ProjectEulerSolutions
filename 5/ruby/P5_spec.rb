@@ -25,4 +25,7 @@ class P5Spec < Minitest::Test
     assert_equal(false, tester10.divisible?(2519) )
   end
 
+  def test_find_multiple_10
+    assert_equal(2520, P5.new(10).find_min_multiple)
+  end
 end
