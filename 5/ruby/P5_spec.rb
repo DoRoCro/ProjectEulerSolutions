@@ -20,4 +20,9 @@ class P5Spec < Minitest::Test
     assert_equal(true, tester10.divisible?(2520) )
   end
 
+  def test_2519_not_evenly_divisible_10
+    tester10 = P5.new 10
+    assert_equal(false, tester10.divisible?(2519) )
+  end
+
 end
