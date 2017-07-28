@@ -14,21 +14,14 @@ class P5
   end
 
   def find_min_multiple
-    # try to assemble min multiple from prime factors
-    found = false
     primes = {2 => 1}
     for i in 2..@number do
       factors = i.prime_division
-      puts "primes = #{primes}"
-      puts "i= #{i} factors= #{factors}"
-
       factors.each do |fac|
-        puts "fac[0]= #{fac[0]}"
         primes[fac[0]] = primes[fac[0]] ? [primes[fac[0]], fac[1]].max : fac[1]
       end
     end
     multiple = 1
-    puts primes
     primes.each { |p,e| multiple *= p ** e }
     return multiple
   end
