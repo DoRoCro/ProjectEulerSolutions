@@ -2,7 +2,6 @@ var isEvenlyDivisible = function (number, divisor) {
   for (var i = 1; i < divisor; i++) {
     if (number % i !== 0) return false
   }
-  // console.log('got here')
   return true
 }
 
@@ -24,8 +23,8 @@ var generate = function (number) {
 
 exports.isEvenlyDivisible = isEvenlyDivisible
 exports.generate = generate
-// module.exports = P5
 
 console.log('2520 is divisible? ', isEvenlyDivisible(2520, 10))
 console.log('generate 10 gives ', generate(10))
 console.log('generate 20 gives ', generate(20))
+console.log('The answer is: ', generate(20))
