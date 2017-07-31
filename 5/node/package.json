@@ -1,0 +1,17 @@
+{
+  "name": "p5",
+  "version": "1.0.0",
+  "description": "Euler Problem 5",
+  "main": "P5.js",
+  "dependencies": {},
+  "devDependencies": {
+    "mocha": "^3.4.2"
+  },
+  "scripts": {
+    "test": "mocha specs/*"
+  },
+  "author": "DRC",
+  "license": "ISC",
+  "private": true,
+  "keywords": []
+}
