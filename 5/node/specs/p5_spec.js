@@ -7,14 +7,14 @@ describe('P5', function () {
   beforeEach('before each', function () {
   })
   it('should determine 2520 evenly divisible by 10', function () {
-    assert.strictEqual(P5(2520, 10), true)
+    assert.strictEqual(P5.isEvenlyDivisible(2520, 10), true)
   })
 
   it('should determine 2519 is not evenly divisible by 10', function () {
-    assert.strictEqual(P5(2519, 10), false)
+    assert.strictEqual(P5.isEvenlyDivisible(2519, 10), false)
   })
 
-  it.skip('should calculate 233168 for 1000', function () {
-    assert.strictEqual(P5(), 233168)
+  it('should generate 2520 for 10', function () {
+    assert.strictEqual(P5.generate(10), 2520)
   })
 })

@@ -1,10 +1,31 @@
-var P5isEvenlyDivisible = function (number, divisor) {
+var isEvenlyDivisible = function (number, divisor) {
   for (var i = 1; i < divisor; i++) {
     if (number % i !== 0) return false
   }
-  console.log('got here')
+  // console.log('got here')
   return true
 }
 
-module.exports = P5isEvenlyDivisible
-console.log('2520 is divisible? ', P5isEvenlyDivisible(2520))
+var generate = function (number) {
+  var product = 1
+  for (var i = 1; i < number; i++) {
+    product *= i
+  }
+  // now filter out repeated factors - not sure if this is rigorous
+  // but works for 10, 20.
+  var target = product
+  for (i = 2; i < number; i++) {
+    while (isEvenlyDivisible(target / i, number)) {
+      target /= i
+    }
+  }
+  return target
+}
+
+exports.isEvenlyDivisible = isEvenlyDivisible
+exports.generate = generate
+// module.exports = P5
+
+console.log('2520 is divisible? ', isEvenlyDivisible(2520, 10))
+console.log('generate 10 gives ', generate(10))
+console.log('generate 20 gives ', generate(20))
