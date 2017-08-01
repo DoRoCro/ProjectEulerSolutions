@@ -1,5 +1,5 @@
 class P8
-  def initialize big_number_as_string
+  def initialize(big_number_as_string)
     @number_string = big_number_as_string.clone
   end
 
