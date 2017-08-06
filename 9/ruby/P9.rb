@@ -39,10 +39,9 @@ class PyTrip
       @b += 1
     end
     @c = get_c(@target, @a, @b)
-    puts " #{@a}, #{@b}, #{@c}"
   end
 end
 
 p9 = PyTrip.new(1000)
-puts "#{p9.py_values.to_s}"
-puts "The answer is #{p9.abc}"
+puts "Pythagorean triplet [a, b, c] is #{p9.py_values.to_s}"
+puts "The answer (a*b*c) is #{p9.abc}"
