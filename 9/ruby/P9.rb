@@ -1,9 +1,15 @@
 class PyTrip
   def initialize(number)
     @target = number
-    @a = 3
-    @b = 4
-    @c = @target - @a - @b
+    @a = 1
+    @b = 2
+    @c = get_c(@target, @a, @b)
+    py_search if !py_triplet?
+  end
+
+  def get_c(total, a, b)
+    c = total - (a + b)
+    return c
   end
 
   def py_triplet?
@@ -18,4 +24,25 @@ class PyTrip
     return @a * @b * @c
   end
 
+  def py_search
+    while !py_values do
+      py_triplet? ? return : py_try_next
+      return if @c <= 0
+    end
+  end
+
+  def py_try_next
+    if @b >= @c - 1
+      @a += 1
+      @b = @a + 1
+    else
+      @b += 1
+    end
+    @c = get_c(@target, @a, @b)
+    puts " #{@a}, #{@b}, #{@c}"
+  end
 end
+
+p9 = PyTrip.new(1000)
+puts "#{p9.py_values.to_s}"
+puts "The answer is #{p9.abc}"
