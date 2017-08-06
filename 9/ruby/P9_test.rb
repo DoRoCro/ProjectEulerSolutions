@@ -2,12 +2,14 @@ require 'minitest/autorun'
 require 'minitest/rg'
 require_relative './P9'
 
+#
+# TDD of Problem 9 solution
+#
 class PyTripTest < Minitest::Test
-
   def test_3_4_5_is_triplet_for_12
     p9 = PyTrip.new(12)
     assert_equal(true, p9.py_triplet?)
-    assert_equal([3,4,5], p9.py_values)
+    assert_equal([3, 4, 5], p9.py_values)
   end
 
   def test_3_4_6_is_not_triplet_for_13
@@ -21,4 +23,3 @@ class PyTripTest < Minitest::Test
     assert_equal(60, p9.abc)
   end
 end
-

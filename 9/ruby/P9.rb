@@ -1,15 +1,17 @@
+#
+# Project Euler Problem 9 solution
+#
 class PyTrip
   def initialize(number)
     @target = number
     @a = 1
     @b = 2
     @c = get_c(@target, @a, @b)
-    py_search if !py_triplet?
+    py_search unless py_triplet?
   end
 
   def get_c(total, a, b)
-    c = total - (a + b)
-    return c
+    total - (a + b)
   end
 
   def py_triplet?
@@ -21,11 +23,11 @@ class PyTrip
   end
 
   def abc
-    return @a * @b * @c
+    @a * @b * @c
   end
 
   def py_search
-    while !py_values do
+    until py_values
       py_triplet? ? return : py_try_next
       return if @c <= 0
     end
@@ -43,5 +45,5 @@ class PyTrip
 end
 
 p9 = PyTrip.new(1000)
-puts "Pythagorean triplet [a, b, c] is #{p9.py_values.to_s}"
+puts "Pythagorean triplet [a, b, c] is #{p9.py_values}"
 puts "The answer (a*b*c) is #{p9.abc}"
