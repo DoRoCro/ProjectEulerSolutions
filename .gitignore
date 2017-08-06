@@ -3,6 +3,6 @@ node_modules/
 .idea
 */java/out/
 java.iml
-*/java/.gradle/
-*/java/.settings
-*/java/bin/
+/java/.gradle/
+/java/.settings
+/java/bin
