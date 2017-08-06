@@ -1,8 +1,8 @@
 .vscode
-node_modules
+node_modules/
 .idea
-*/java/out
+*/java/out/
 java.iml
-*/java/.gradle
+*/java/.gradle/
 */java/.settings
-*/java/bin
+*/java/bin/
