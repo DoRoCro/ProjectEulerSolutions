@@ -1,17 +1,17 @@
 class PyTrip
   def initialize(number)
     @target = number
-    @a=1
-    @b=2
-    @c=@target - @a - @b
+    @a = 3
+    @b = 4
+    @c = @target - @a - @b
   end
 
   def py_triplet?
-    return true
+    @a**2 + @b**2 == @c**2
   end
 
   def py_values
-    return [3,4,5]
+    self.py_triplet? ? [@a,@b,@c] : nil
   end
 
   def abc
