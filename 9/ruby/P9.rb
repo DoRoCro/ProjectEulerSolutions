@@ -11,7 +11,7 @@ class PyTrip
   end
 
   def py_values
-    self.py_triplet? ? [@a,@b,@c] : nil
+    py_triplet? ? [@a, @b, @c] : nil
   end
 
   def abc
