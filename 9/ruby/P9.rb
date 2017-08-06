@@ -15,7 +15,7 @@ class PyTrip
   end
 
   def abc
-    return 60
+    return @a * @b * @c
   end
 
 end
